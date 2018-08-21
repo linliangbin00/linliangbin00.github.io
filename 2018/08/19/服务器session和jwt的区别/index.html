@@ -7,17 +7,17 @@
   
   <title>服务器session和jwt的区别 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="服务器session和jwt的区别sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被">
+  <meta name="description" content="sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被破译，或cookie被其他网站收集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器session和jwt的区别">
 <meta property="og:url" content="http://yoursite.com/2018/08/19/服务器session和jwt的区别/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="服务器session和jwt的区别sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被">
+<meta property="og:description" content="sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被破译，或cookie被其他网站收集">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-21T01:35:16.184Z">
+<meta property="og:updated_time" content="2018-08-21T02:56:48.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器session和jwt的区别">
-<meta name="twitter:description" content="服务器session和jwt的区别sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被">
+<meta name="twitter:description" content="sessionsession和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被破译，或cookie被其他网站收集">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,7 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="服务器session和jwt的区别"><a href="#服务器session和jwt的区别" class="headerlink" title="服务器session和jwt的区别"></a>服务器session和jwt的区别</h2><h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>session和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被破译，或cookie被其他网站收集（例如：1. appA主动设置域B cookie，让域B cookie获取；2. XSS，在appA上通过javascript获取document.cookie，并传递给自己的appB）。 </p>
+        <h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>session和cookie的目的相同，都是为了克服http协议无状态的缺陷，但完成的方法不同。session通过cookie，在客户端保存session id，而将用户的其他会话消息保存在服务端的session对象中，与此相对的，cookie需要将所有信息都保存在客户端。因此cookie存在着一定的安全隐患，例如本地cookie中保存的用户名密码被破译，或cookie被其他网站收集（例如：1. appA主动设置域B cookie，让域B cookie获取；2. XSS，在appA上通过javascript获取document.cookie，并传递给自己的appB）。 </p>
 <h3 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h3><p><strong>JSON Web Tokens (JWT) 用于用户验证</strong></p>
 <p><strong>现代网页应用验证用户时面临的困难</strong></p>
 <ol>
@@ -113,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/19/服务器session和jwt的区别/" data-id="cjl31ftrg0000ecvxtt43gjtp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/19/服务器session和jwt的区别/" data-id="cjl34cisv0000h0vxknsfzhwk" class="article-share-link">Share</a>
       
       
     </footer>
