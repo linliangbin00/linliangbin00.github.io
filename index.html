@@ -88,20 +88,19 @@
 <h3 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h3><p><strong>JSON Web Tokens (JWT) 用于用户验证</strong></p>
 <p><strong>现代网页应用验证用户时面临的困难</strong></p>
 <ol>
-<li>app server 可能是分布式的, 有很多 server, 在一个 server 上登录了,<br>其他的没登陆, 需要额外工具来解决这个问题(<a href="http://stackoverflow.com/questions/10494431/sticky-and-non-sticky-sessions" target="_blank" rel="noopener">sticky sessions</a>)</li>
-<li>app 使用 RESTfull api 来获取数据, RESTful api 的原则是 stateless, 但使用 session, 使用 session 和 cookies 会引入 state; 另外, 当 API server 与 app server<br>可能是两个 server, 需要 允许 CORS(<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">Cross-Origin Resource Sharing</a>), 但是 cookies 只能在同一个 domain 中使用</li>
-<li>app 可能需要下游服务, 每个 server 都要处理 cookie(???)</li>
+<li>app server 可能是分布式的, 有很多 server, 在一个 server 上登录了,其他的没登陆, 需要额外工具来解决这个问题(<a href="http://stackoverflow.com/questions/10494431/sticky-and-non-sticky-sessions" target="_blank" rel="noopener">sticky sessions</a>)</li>
+<li>app 使用 RESTfull api 来获取数据, RESTful api 的原则是 stateless, 但使用 session, 使用 session 和 cookies 会引入 state; 另外, 当 API server 与 app server可能是两个 server, 需要 允许 CORS(<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">Cross-Origin Resource Sharing</a>), 但是 cookies 只能在同一个 domain 中使用</li>
+<li>app 可能需要下游服务, 每个 server 都要处理 cookie</li>
 </ol>
 <p><strong>解决办法: 使用 JWT 方式来验证用户</strong></p>
-<p>JWT 方案不使用 session 基于 token.<br>用户注册之后, 服务器生成一个 JWT token返回给浏览器, 浏览器向服务器请求<br>数据时将 JWT token 发给服务器, 服务器用 signature 中定义的方式解码<br>JWT 获取用户信息.</p>
+<p>JWT 方案不使用 session 基于 token.<br>用户注册之后, 服务器生成一个 JWT token返回给浏览器, 浏览器向服务器请求数据时将 JWT token 发给服务器, 服务器用 signature 中定义的方式解码JWT 获取用户信息.</p>
 <p>一个 JWT token包含3部分:</p>
 <ol>
 <li>header: 告诉我们使用的算法和 token 类型</li>
-<li>Payload: 必须使用 <code>sub</code> key 来指定用户 ID, 还可以包括其他信息</li>
-</ol>
-<p>比如 email, username 等.</p>
-<ol start="3">
-<li>Signature: 用来保证 JWT 的真实性. 可以使用不同算法</li>
+<li><p>Payload: 必须使用 <code>sub</code> key 来指定用户 ID, 还可以包括其他信息，比如 email, username 等.</p>
+</li>
+<li><p>Signature: 用来保证 JWT 的真实性. 可以使用不同算法</p>
+</li>
 </ol>
 <p><strong>和Session方式存储id的差异</strong></p>
 <p>Session方式存储用户id的最大弊病在于要占用大量服务器内存，对于较大型应用而言可能还要保存许多的状态。一般而言，大型应用还需要借助一些KV数据库和一系列缓存机制来实现Session的存储。</p>
@@ -112,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/19/服务器session和jwt的区别/" data-id="cjl0pj81x0001xsvxsbqer7yn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/19/服务器session和jwt的区别/" data-id="cjl31ftrg0000ecvxtt43gjtp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -165,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/18/MTV架构设计/" data-id="cjl0pj81l0000xsvxi7outval" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/18/MTV架构设计/" data-id="cjl31ftv20001ecvxu8dyywcl" class="article-share-link">Share</a>
       
       
     </footer>
